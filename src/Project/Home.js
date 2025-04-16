@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 
 function Home() {
   const { todo, loading, error } = useFetch(
-    "https://jsonplaceholder.typichode.com/todos"
+    "https://jsonplaceholder.typicode.com/todos"
   );
 
   const retry = () => {
