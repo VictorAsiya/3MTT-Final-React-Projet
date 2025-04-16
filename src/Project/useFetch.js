@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
 const useFetch = (url) =>{
-    const [todo, setTodo] = useState(null)
+    const [todo, setTodo] = useState()
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(false)
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -17,7 +17,7 @@ const useFetch = (url) =>{
             .then((data)=>{
                 setTodo(data)
                 setLoading(false)
-                setError(null)
+                setError(false)
             })
             .catch((err)=>{
                 setError(err.message)
